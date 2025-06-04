@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Coding Portfolio</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
       font-family: 'Arial', sans-serif;
       background: linear-gradient(to right, #00b4db, #00ff6a);
       color: white;
@@ -15,10 +14,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 750px;
+      max-width: 800px;
       background: rgba(0, 0, 0, 0.4);
       padding: 30px;
       border-radius: 20px;
@@ -34,20 +34,38 @@
       line-height: 1.5em;
     }
 
-    .dream, .learning {
+    .section {
       margin-top: 30px;
       padding: 20px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
     }
 
-    .dream h2, .learning h2 {
+    .section h2 {
       font-size: 1.5em;
       margin-bottom: 10px;
     }
 
-    .dream p, .learning p {
-      font-size: 1.1em;
+    .games {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .games a img {
+      width: 100px;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      background: white;
+      padding: 5px;
+    }
+
+    .games a img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -59,19 +77,35 @@
       I'm hoping some awesome developers can help me make my dream game.
     </p>
 
-    <div class="dream">
+    <div class="section">
       <h2>🎮 My Dream Game</h2>
       <p>
-        I want to create the **best FPS game ever**! It will have cool weapons, awesome graphics, fun maps, and exciting multiplayer battles.  
+        I want to create the <strong>best FPS game ever</strong>! It will have cool weapons, awesome graphics, fun maps, and exciting multiplayer battles.  
         I need help from experienced devs to make this dream real!
       </p>
     </div>
 
-    <div class="learning">
+    <div class="section">
       <h2>📘 What I'm Learning</h2>
       <p>
-        Right now, I know a little bit of **Python**, and I'm looking forward to learning **C++** — because it’s what the pros use to make big games like Fortnite and Call of Duty!
+        I know a little bit of <strong>Python</strong>, and I’m excited to learn <strong>C++</strong> — because it's used to make big games like Fortnite and Call of Duty!
       </p>
+    </div>
+
+    <div class="section">
+      <h2>🕹️ My Favourite Games</h2>
+      <p>These are some of the games I love to play! Click to visit them:</p>
+      <div class="games">
+        <a href="https://www.fortnite.com" target="_blank">
+          <img src="fortnite.png" alt="Fortnite Logo" />
+        </a>
+        <a href="https://www.roblox.com" target="_blank">
+          <img src="roblox.png" alt="Roblox Logo" />
+        </a>
+        <a href="https://www.minecraft.net" target="_blank">
+          <img src="minecraft.png" alt="Minecraft Logo" />
+        </a>
+      </div>
     </div>
   </div>
 </body>
