@@ -1,112 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Coding Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudransh | Future Game Dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #00b4db, #00ff6a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(0,0,0,0.5) 20%, transparent 80%);
+      background-size: 400% 400%;
+      animation: pulseBg 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes pulseBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
       text-align: center;
-      min-height: 100vh;
+      padding: 80px 20px 40px;
+      background: #000000a0;
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #00ffcc;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 6px solid #00ffcc;
+      object-fit: cover;
+      box-shadow: 0 0 20px #00ffcc88;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin: 20px 0 10px;
+      color: #00ffcc;
+    }
+
+    .typewriter {
+      font-size: 1.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end);
+      width: 0;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
 
     .container {
-      max-width: 800px;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 20px;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.5em;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
 
     .section {
-      margin-top: 30px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
+      background: #00000088;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00ffcc44;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    .section h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #00ffcc;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #fff;
+      text-decoration: underline;
     }
 
     .games {
       display: flex;
       justify-content: center;
-      gap: 30px;
       flex-wrap: wrap;
-      margin-top: 15px;
+      gap: 20px;
     }
 
-    .games a img {
-      width: 100px;
-      height: auto;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      background: white;
-      padding: 5px;
+    .games a {
+      display: inline-block;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .games a img:hover {
+    .games a:hover {
       transform: scale(1.1);
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .games img {
+      width: 120px;
+      border-radius: 16px;
+      background: #fff;
+      padding: 8px;
+    }
+
+    iframe.scratch {
+      width: 100%;
+      height: 402px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #aaa;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hi! I'm a 9-Year-Old Coder 👾</h1>
-    <p>
-      I love coding and I'm really interested in game development!  
-      I'm hoping some awesome developers can help me make my dream game.
-    </p>
+  <header>
+    <img src="me.png" alt="Rudransh" class="profile-pic">
+    <h1>Rudransh</h1>
+    <p class="typewriter">I’m a 9-year-old coder who loves game dev!</p>
+    <div class="badge">Coding Since Age 9</div>
+  </header>
 
+  <div class="container">
     <div class="section">
-      <h2>🎮 My Dream Game</h2>
-      <p>
-        I want to create the <strong>best FPS game ever</strong>! It will have cool weapons, awesome graphics, fun maps, and exciting multiplayer battles.  
-        I need help from experienced devs to make this dream real!
-      </p>
+      <h2>🎯 My Dream</h2>
+      <p>I want to make the world’s best FPS game — fast, smart, action-packed, and unforgettable. I dream of maps that feel alive, weapons that are cool, and teamwork that’s next level.</p>
     </div>
 
     <div class="section">
-      <h2>📘 What I'm Learning</h2>
-      <p>
-        I know a little bit of <strong>Python</strong>, and I’m excited to learn <strong>C++</strong> — because it's used to make big games like Fortnite and Call of Duty!
-      </p>
+      <h2>📘 My Learning Journey</h2>
+      <ul>
+        <li>Python: Just started but already loving it</li>
+        <li>C++: Learning for real game development</li>
+        <li>Scratch: Making fun games for now</li>
+        <li>Unity & Unreal: Coming soon!</li>
+      </ul>
     </div>
 
     <div class="section">
       <h2>🕹️ My Favourite Games</h2>
-      <p>These are some of the games I love to play! Click to visit them:</p>
+      <p>Click below to visit their websites:</p>
       <div class="games">
-        <a href="https://www.fortnite.com" target="_blank">
-          <img src="fortnite.png" alt="Fortnite Logo" />
-        </a>
-        <a href="https://www.roblox.com" target="_blank">
-          <img src="roblox.png" alt="Roblox Logo" />
-        </a>
-        <a href="https://www.minecraft.net" target="_blank">
-          <img src="minecraft.png" alt="Minecraft Logo" />
-        </a>
+        <a href="https://www.fortnite.com" target="_blank"><img src="fortnite.png" alt="Fortnite"></a>
+        <a href="https://www.roblox.com" target="_blank"><img src="roblox.png" alt="Roblox"></a>
+        <a href="https://www.minecraft.net" target="_blank"><img src="minecraft.png" alt="Minecraft"></a>
       </div>
     </div>
+
+    <div class="section">
+      <h2>🚀 My Scratch Projects</h2>
+      <p>Explore the games I built and shared on Scratch:</p>
+      <a href="https://scratch.mit.edu/users/qwerty_314/" target="_blank">Visit My Scratch Profile</a>
+      <iframe class="scratch" src="https://scratch.mit.edu/projects/886465698/embed"></iframe>
+    </div>
+
+    <div class="section contact">
+      <h2>📬 Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:rudransh1908@outlook.com">rudransh1908@outlook.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+16479669317">+1 (647) 966-9317</a></p>
+      <p>If you're a dev, mentor, or cool gamer — I'd love to talk!</p>
+    </div>
   </div>
+
+  <footer>
+    <p>🚀 Made with 💚 by Rudransh | Future Game Dev Legend</p>
+  </footer>
 </body>
 </html>
