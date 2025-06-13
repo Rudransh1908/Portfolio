@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rudransh | Future Game Dev | Space Scientist</title>
+  <title>Rudransh | Future Game Dev</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,22 +16,13 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #fff;
-      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      background: linear-gradient(135deg, #00aaff, #00ffaa);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
       overflow-x: hidden;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle, rgba(0,0,0,0.5) 20%, transparent 80%);
-      background-size: 400% 400%;
-      animation: pulseBg 15s ease infinite;
-      z-index: -1;
-    }
-
-    @keyframes pulseBg {
+    @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -59,19 +50,6 @@
       font-size: 3rem;
       margin: 20px 0 10px;
       color: #00ffcc;
-    }
-
-    .typewriter {
-      font-size: 1.2rem;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 4s steps(40, end);
-      width: 0;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
     }
 
     .badge {
@@ -152,14 +130,6 @@
       padding: 8px;
     }
 
-    iframe.scratch {
-      width: 100%;
-      height: 402px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-
     .contact {
       text-align: center;
       font-size: 1.1rem;
@@ -176,16 +146,15 @@
 </head>
 <body>
   <header>
-    <img src="IMG_4538.jpeg" alt="Rudransh" class="profile-pic">
+    <img src="me.png" alt="Rudransh" class="profile-pic">
     <h1>Rudransh</h1>
-    <p class="typewriter">I’m a 9-year-old coder who loves game dev!</p>
     <div class="badge">Coding Since Age 9</div>
   </header>
 
   <div class="container">
     <div class="section">
       <h2>🎯 My Dream</h2>
-      <p>I want to make the world’s best FPS game — fast, smart, action-packed, and unforgettable. I dream of maps that feel alive, graphics that are cool, and teamwork that’s next level.</p>
+      <p>I want to make the world’s best FPS game — fast, smart, action-packed, and unforgettable. I dream of maps that feel alive, <strong>graphics</strong> that are cool, and teamwork that’s next level. And yes — I plan to live in the biggest mansion ever, worth 100 billion dollars!</p>
     </div>
 
     <div class="section">
@@ -202,23 +171,22 @@
       <h2>🕹️ My Favourite Games</h2>
       <p>Click below to visit their websites:</p>
       <div class="games">
-        <a href="https://smashkarts.io/" target="_blank"><img src="9c9e529b14731be871b07b89660bbc2a.png" alt="Smash karts"></a>
-        <a href="https://www.roblox.com" target="_blank"><img src="roblox-logo-roblox-icon-transparent-free-png.webp" alt="Roblox"></a>
-        <a href="https://www.minecraft.net" target="_blank"><img src="images.png" alt="Minecraft"></a>
+        <a href="https://smashkarts.io" target="_blank"><img src="smashkarts.png" alt="Smash Karts"></a>
+        <a href="https://www.roblox.com" target="_blank"><img src="roblox.png" alt="Roblox"></a>
+        <a href="https://www.minecraft.net" target="_blank"><img src="minecraft.png" alt="Minecraft"></a>
       </div>
     </div>
 
     <div class="section">
-      <h2>🚀 My Scratch Projects</h2>
-      <p>Explore the games I built and shared on Scratch:</p>
-      <a href="https://scratch.mit.edu/users/qwerty_314/" target="_blank">Visit My Scratch Profile</a>
-
+      <h2>⚽ Extra Curricular Activities</h2>
+      <p>In my free time, I love to play sports like <strong>badminton</strong>, <strong>cricket</strong>, and <strong>basketball</strong>. Sometimes, I also try <strong>archery</strong> where I aim at a board and try to hit the center!</p>
+    </div>
 
     <div class="section contact">
       <h2>📬 Contact Me</h2>
       <p><strong>Email:</strong> <a href="mailto:rudransh1908@outlook.com">rudransh1908@outlook.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:+16479669317">+1 (647) 966-9317</a></p>
-      <p>If you're a dev, mentor, or a scholarship dealer — I'd love to talk!</p>
+      <p>If you're a dev, mentor, or cool gamer — I'd love to talk!</p>
     </div>
   </div>
 
@@ -227,3 +195,4 @@
   </footer>
 </body>
 </html>
+
